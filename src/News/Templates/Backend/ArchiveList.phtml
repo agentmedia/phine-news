@@ -1,0 +1,37 @@
+<h1><a href="<?php HtmlOut($this->BackLink()) ?>" class="fa fa-chevron-circle-left right" title="<?php TransOut('Core.ButtonText.Back')?>"></a><?php TransOut('News.ArchiveList.Title') ?></h1>
+<p>
+    <?php echo Trans('News.ArchiveList.Description.Amount_{0}', count($this->archives)) ?>
+</p>
+<?php if ($this->CanCreate()): ?>
+<p>
+    <a href="<?php HtmlOut($this->FormUrl())?>" class="secondary button fi-plus"> <?php TransOut('News.ArchiveList.New') ?></a>
+</p>
+<?php endif; ?>
+<?php if (count($this->archives)): ?>
+<div class="editable-list">
+<table>
+    <thead>
+        <tr>
+            <th><?php TransOut('News.ArchiveList.Name') ?></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($this->archives as $archive): ?>
+        <tr>
+            <td><?php HtmlOut($archive->GetName()); ?></td>
+            <td><a class="fa fa-ellipsis-h tiny button" href="<?php HtmlOut($this->CategoriesUrl($archive)) ?>" title="<?php TransOut('News.ArchiveList.Categories') ?>"></a>
+                <?php if ($this->CanEdit($archive)): ?>
+                <a class="fa fa-pencil tiny button" href="<?php HtmlOut($this->FormUrl($archive)) ?>" title="<?php TransOut('News.ArchiveList.Edit') ?>"></a>
+                <a class="fa fa-files-o tiny button" href="<?php HtmlOut($this->ArticlesUrl($archive)) ?>" title="<?php TransOut('News.ArchiveList.Articles') ?>"></a>
+                <?php endif; ?>
+                <?php if ($this->CanDelete($archive)): ?>
+                <a href="#" class="delete-link fa fa-remove alert tiny button" data-id="<?php echo $archive->GetID(); ?>" data-description="<?php TransOut('Core.ModalDelete.Description.Name_{0}', $archive->GetName()) ?>" title="<?php TransOut('News.ArchiveList.Delete') ?>"></a>
+                <?php endif;  ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+</div>
+<?php endif; ?>

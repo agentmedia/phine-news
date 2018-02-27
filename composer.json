@@ -1,0 +1,27 @@
+{
+    "name": "agentmedia/phine-news",
+    "description": "The news bundle for the Phine CMS, adding some basic news and blogging features",
+    "license": "Apache-2.0",
+    "type": "phine-bundle",
+    "homepage": "http://github.com/agentmedia/phine-news",
+    "authors": [
+        {
+            "name": "Klaus Potzesny",
+            "homepage": "http://www.agent-media.com/",
+            "role": "head developer",
+            "email": "info@agent-media.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "agentmedia/phine-core": "*",
+        "agentmedia/phine-framework": "*",
+        "phpmailer/phpmailer": ">=6.0.3"
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "Phine\\Bundles\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<h1><a href="<?php HtmlOut($this->BackLink()) ?>" class="fa fa-chevron-circle-left right" title="<?php TransOut('Core.ButtonText.Back')?>"></a><?php TransOut('News.CategoryList.Title') ?></h1>
+<p>
+    <?php TransOut('News.CategoryList.Description') ?>
+</p>
+<div id="tree" class="editable-tree">
+<table>
+    <tr class="open" data-tree-id="0">
+             
+            <td>
+                <strong><?php HtmlOut($this->archive->GetName()) ?></strong>
+            </td>
+            <td>
+                <?php if ($this->CanCreate()): ?>
+                <a class="fa fa-arrow-right tiny secondary button tree-cut-hidden" href="<?php TransOut($this->FormUrl())?>" title="<?php TransOut('News.CategoryList.CreateStartCategory')?>"></a>
+                <?php endif; ?>
+                <a class="fa fa-arrow-right tree-insert-in tiny button" title="<?php TransOut('News.CategoryList.InsertIn')?>"></a>
+                <a class="fa fa-times tree-clipboard tiny secondary button" title="<?php TransOut('News.CategoryList.CancelCut')?>"></a>
+            </td>
+    </tr>
+    <?php if ($this->hasCategories):?>
+    <?php while ($category = $this->NextCategory()):?>
+    <tr data-tree-parent-id="0" data-tree-id="<?php echo $category->GetID(); ?>">
+        <td><?php HtmlOut($category->GetName()); ?></td>
+        <td>
+            <?php if ($this->CanCreate()): ?>
+            <a class="tiny secondary button tree-cut-hidden fa fa-arrow-down" href="<?php HtmlOut($this->CreateAfterUrl($category)) ?>" title="<?php TransOut('News.CategoryList.CreateAfter')?>"></a>
+            <?php endif; ?>
+            <a href="#" class="tiny button tree-insert-after fa fa-arrow-down" title="<?php TransOut('News.CategoryList.InsertAfter')?>"></a>
+            <a class="tiny button fa fa-scissors tree-cutter" title="<?php TransOut('News.CategoryList.Cut')?>"></a>
+            <?php if ($this->CanEdit($category)): ?>
+            <a class="tiny button fa fa-pencil tree-cut-hidden" href="<?php HtmlOut($this->FormUrl($category)) ?>" title="<?php TransOut('News.CategoryList.Edit')?>"></a>
+            <?php endif; ?>
+            <?php if ($this->CanDelete($category)): ?>
+            <a class="tiny tree-remover alert button fa fa-remove tree-cut-hidden" title="<?php TransOut('News.CategoryList.Delete')?>" data-tree-remove-message="<?php TransOut('Core.ModalDelete.Description.Name_{0}', $category->GetName()) ?>"></a>
+            <?php endif; ?>
+        </td>
+    </tr>
+    <?php endwhile; ?>
+    <?php endif; ?>
+</table>
+</div>
+<a href="<?php HtmlOut($this->BackLink())?>" class="button"><span class="fa fa-chevron-circle-left"></span> <?php TransOut('News.CategoryList.Back')?></a>

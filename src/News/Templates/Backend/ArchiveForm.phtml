@@ -1,0 +1,30 @@
+<h1><a href="<?php HtmlOut($this->BackLink()) ?>" class="fa fa-chevron-circle-left right" title="<?php TransOut('Core.ButtonText.Back')?>"></a><?php TransOut('News.ArchiveForm.Title') ?></h1>
+<p>
+    <?php TransOut('News.ArchiveForm.Description') ?>
+</p>
+<form method="post" action="<?php HtmlOut(CurrentUri()) ?>">
+    <fieldset>
+        <legend><?php TransOut('News.ArchiveForm.Legend') ?></legend>
+        
+        <div class="row">
+            <div class="medium-4 columns">
+                <?php echo $this->RenderElement('Name'); ?>
+            </div>
+            <div class="medium-4 columns">
+                <?php echo $this->RenderElement('ItemsPerPage'); ?>
+            </div>
+            <div class="medium-4 columns">
+                <?php echo $this->RenderElement('DateFormat'); ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="medium-6 columns">
+                <?php echo $this->RenderElement('MetaTitlePlacement'); ?>
+            </div>
+            <div class="medium-6 columns">
+                <?php echo $this->RenderElement('MetaDescriptionPlacement'); ?>
+            </div>
+        </div>
+    </fieldset>
+    <?php echo $this->RenderSubmit(); ?>
+</form>

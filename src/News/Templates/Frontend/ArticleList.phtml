@@ -1,0 +1,46 @@
+<?php if ($this->CssID() || $this->CssClass()): ?>
+<div<?php if ($this->CssClass()): ?> class="<?php HtmlOut($this->CssClass()) ?>"<?php endif; ?><?php if ($this->CssID()): ?> id="<?php HtmlOut($this->CssID()) ?><?php endif; ?>">
+<?php endif; ?>
+<?php if (!$this->HasArticles()): ?>
+<p class="article-no-articles">
+    <?php TransOut('News.ArticleList.NoArticles'); ?>
+</p>
+<?php else: ?>
+<p class="article-numbers">
+    <?php TransOut('News.ArticleList.DisplayArticles.From_{0}.To_{1}.Of_{2}',
+            $this->FromNumber(), $this->ToNumber(), $this->ArticlesTotal()); ?>
+</p>
+<ul class="article-list">
+    <?php foreach ($this->articles as $article): ?>
+    <li class="article-item">
+        <h2 class="article-headline">
+            <?php HtmlOut($article->GetTitle()); ?>
+        </h2>
+        <?php if ($this->AuthorName($article)): ?>
+        <p class="article-date">
+            <?php HtmlOut($this->AuthorName($article)) ?>
+        </p>
+        <?php endif; ?>
+        <p class="article-date">
+            <?php HtmlOut($this->CreateDate($article)) ?>
+        </p>
+        <p class="article-teaser">
+            <?php echo $article->GetTeaser(); ?>
+        </p>
+        <p class="article-text">
+            <?php echo $article->GetText(); ?>
+        </p>
+        <?php if ($this->HasArticleUrl()): ?>
+        <p class="article-link">
+            <a href="<?php HtmlOut($this->ArticleUrl($article)) ?>">
+                <?php TransOut('News.ArticleList.ReadMore'); ?>
+            </a>
+        </p>
+        <?php endif; ?>
+    </li>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>
+<?php if ($this->CssID() || $this->CssClass()): ?>
+</div>
+<?php endif; ?>
