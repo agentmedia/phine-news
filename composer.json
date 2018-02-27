@@ -15,9 +15,7 @@
     "require": {
         "php": ">=5.3.0",
         "agentmedia/phine-core": "*",
-        "agentmedia/phine-framework": "*",
-        "phpmailer/phpmailer": ">=6.0.3"
-        
+        "agentmedia/phine-framework": "*"
     },
     "autoload": {
         "psr-4": {
