@@ -32,8 +32,9 @@ news/{article}.html
 === 1.0.0  ===
  - First working version
 
-=== 1.0.1, 1.0.2 ===
+=== 1.0.1, 1.0.2, 1.0.3 ===
   - Added "ReadMore" wording in article list
   - Added multiple missing translations
   - Replaced the wrapper tag for article teaser and texts from <p> to <div>
-    in default frontend templates to avoid invalid HTML caused by surrounding <p> from backend rich text editor 
+    in default frontend templates to avoid invalid HTML caused by surrounding <p> from backend rich text editor
+  - Added already planned meta title adjustment by article title and teaser

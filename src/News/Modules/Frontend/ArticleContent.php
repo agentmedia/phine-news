@@ -8,6 +8,8 @@ use Phine\Framework\System\Http\Request;
 use Phine\Bundles\Core\Logic\Util\PublishDateUtil;
 use App\Phine\Database\News\Archive;
 use App\Phine\Database\News\Category;
+use Phine\Bundles\News\Logic\Enums\MetaPlacement;
+use Phine\Bundles\Core\Logic\Rendering\PageRenderer;
 
 /**
  * The frontend article view
@@ -44,8 +46,46 @@ class ArticleContent extends FrontendModule
         if ($this->article) {
             $this->category = $this->article->GetCategory();
             $this->archive = $this->category->GetArchive();
+            $this->InitMetaTitle();
+            $this->InitMetaDescription();
         }
         return parent::Init();
+    }
+    
+    private function InitMetaTitle() {
+        switch ($this->archive->GetMetaTitlePlacement()) {
+            case MetaPlacement::Append():
+                PageRenderer::AppendToTitle($this->archive->GetTitle());
+                break;
+            
+            case MetaPlacement::Prepend():
+                PageRenderer::PrependToTitle($this->archive->GetTitle());
+                break;
+            
+            case MetaPlacement::Replace():
+                PageRenderer::$Title = $this->archive->GetTitle();
+                break;
+        }
+    }
+    
+    private function InitMetaDescription() {
+        $teaser = trim(strip_tags($this->article->GetTeaser()));
+        if (!$teaser) {
+            return;
+        }
+        switch ($this->archive->GetMetaDescriptionPlacement()) {
+            case MetaPlacement::Append():
+                PageRenderer::AppendToDescriptoin($teaser);
+                break;
+            
+            case MetaPlacement::Prepend():
+                PageRenderer::PrependToDescription($teaser);
+                break;
+            
+            case MetaPlacement::Replace():
+                PageRenderer::$Description = $teaser;
+                break;
+        }
     }
     
     /**

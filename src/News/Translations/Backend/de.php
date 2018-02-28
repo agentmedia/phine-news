@@ -46,6 +46,7 @@ $translator->AddTranslation($lang, 'News.ArchiveForm.DateFormat.Validation.Requi
 /* Category list */
 $translator->AddTranslation($lang, 'News.CategoryList.Title', 'Kategorien');
 $translator->AddTranslation($lang, 'News.CategoryList.Description', 'Hier können die Kategorien des Archivs bearbeitet werden.');
+$translator->AddTranslation($lang, 'News.CategoryList.CreateStartCategory', 'Kategorie oben einfügen');
 $translator->AddTranslation($lang, 'News.CategoryList.CreateAfter', 'Weitere Kategorie hiernach einfügen');
 $translator->AddTranslation($lang, 'News.CategoryList.Cut', 'Kategorie zum umpositionieren ausschneiden');
 $translator->AddTranslation($lang, 'News.CategoryList.Edit', 'Kategorie bearbeiten');
@@ -76,7 +77,8 @@ $translator->AddTranslation($lang, 'News.ArticleForm.Author', 'Autor');
 $translator->AddTranslation($lang, 'News.ArticleForm.Title', 'Titel');
 $translator->AddTranslation($lang, 'News.ArticleForm.Teaser', 'Teaser-Text');
 $translator->AddTranslation($lang, 'News.ArticleForm.Text', 'Haupttext');
-$translator->AddTranslation($lang, 'News.ArticleForm.PublishLegend', 'Veröffentlichung');
+$translator->AddTranslation($lang, 'News.ArticleForm.Publish.Legend', 'Veröffentlichung');
+$translator->AddTranslation($lang, 'News.Article.Author.Anonymous', '- anonym -');
 $translator->AddTranslation($lang, 'News.ArticleForm.Publish', 'Veröffentlichen');
 $translator->AddTranslation($lang, 'News.ArticleForm.PublishFromDate', 'Sichtbar ab');
 $translator->AddTranslation($lang, 'News.ArticleForm.PublishFromHour', 'Std.');
@@ -85,6 +87,10 @@ $translator->AddTranslation($lang, 'News.ArticleForm.PublishToDate', 'Sichtbar b
 $translator->AddTranslation($lang, 'News.ArticleForm.PublishToHour', 'Std.');
 $translator->AddTranslation($lang, 'News.ArticleForm.PublishToMinute', 'Min.');
 $translator->AddTranslation($lang, 'News.ArticleForm.Submit', 'Speichern');
+
+$translator->AddTranslation($lang, 'News.ArticleForm.Category.Validation.Required.Missing', 'Bitte Kategorie festlegen');
+$translator->AddTranslation($lang, 'News.ArticleForm.Title.Validation.Required.Missing', 'Der Titel muss angegeben werden');
+$translator->AddTranslation($lang, 'News.ArticleForm.Text.Validation.Required.Missing', 'Bitte Text eingeben');
 
 //News Article List Content
 $translator->AddTranslation($lang, 'News.ArticleList.BackendName', 'Artikelliste');
