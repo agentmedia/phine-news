@@ -56,7 +56,7 @@ $translator->AddTranslation($lang, 'News.CategoryList.Back', 'Back to parent arc
 /* Category form */
 $translator->AddTranslation($lang, 'News.CategoryForm.Title', 'Edit category');
 $translator->AddTranslation($lang, 'News.CategoryForm.Description', 'Fit the category settings to your needs, here.');
-$translator->AddTranslation($lang, 'Category Settings');
+$translator->AddTranslation($lang, 'News.CategoryForm.Legend', 'Category Settings');
 $translator->AddTranslation($lang, 'News.CategoryForm.Name', 'Name');
 $translator->AddTranslation($lang, 'News.CategoryForm.Submit', 'Save');
 

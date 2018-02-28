@@ -55,7 +55,7 @@ $translator->AddTranslation($lang, 'News.CategoryList.Back', 'Zurück zum Archiv
 /* Category form */
 $translator->AddTranslation($lang, 'News.CategoryForm.Title', 'Kategorie bearbeiten');
 $translator->AddTranslation($lang, 'News.CategoryForm.Description', 'Passen Sie hier die Eigenschaften der Kategorie an.');
-$translator->AddTranslation($lang, 'Kategorie-Einstellungen');
+$translator->AddTranslation($lang, 'News.CategoryForm.Legend', 'Kategorie-Einstellungen');
 $translator->AddTranslation($lang, 'News.CategoryForm.Name', 'Name');
 $translator->AddTranslation($lang, 'News.CategoryForm.Submit', 'Speichern');
 
