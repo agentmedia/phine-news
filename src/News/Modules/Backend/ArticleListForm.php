@@ -76,6 +76,7 @@ class ArticleListForm extends ContentForm
         $wordings = array();
         $wordings[] = 'NoArticles';
         $wordings[] = 'DisplayArticles.From_{0}.To_{1}.Of_{2}';
+        $wordings[] = 'ReadMore';
         return $wordings;
     }
     private function AddArchiveCategoryField()

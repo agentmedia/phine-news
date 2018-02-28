@@ -44,6 +44,49 @@ $translator->AddTranslation($lang, 'News.ArchiveForm.ItemsPerPage.Validation.Int
 $translator->AddTranslation($lang, 'News.ArchiveForm.ItemsPerPage.Validation.Integer.ExceedsMin_{0}', 'A positive number is required');    
 $translator->AddTranslation($lang, 'News.ArchiveForm.DateFormat.Validation.Required.Missing', 'Define date format for article dates');
 
+/* Category list */
+$translator->AddTranslation($lang, 'News.CategoryList.Title', 'Categories');
+$translator->AddTranslation($lang, 'News.CategoryList.Description', 'Here you can edit the categories in the news archive.');
+$translator->AddTranslation($lang, 'News.CategoryList.CreateAfter', 'Create category after this one');
+$translator->AddTranslation($lang, 'News.CategoryList.Cut', 'Cut category to move it');
+$translator->AddTranslation($lang, 'News.CategoryList.Edit', 'Edit category');
+$translator->AddTranslation($lang, 'News.CategoryList.Delete', 'Delete category');
+$translator->AddTranslation($lang, 'News.CategoryList.Back', 'Back to parent archive');
+
+/* Category form */
+$translator->AddTranslation($lang, 'News.CategoryForm.Title', 'Edit category');
+$translator->AddTranslation($lang, 'News.CategoryForm.Description', 'Fit the category settings to your needs, here.');
+$translator->AddTranslation($lang, 'Category Settings');
+$translator->AddTranslation($lang, 'News.CategoryForm.Name', 'Name');
+$translator->AddTranslation($lang, 'News.CategoryForm.Submit', 'Save');
+
+/* article list */
+$translator->AddTranslation($lang, 'News.ArticleList.Title', 'Articles in this Archive');
+$translator->AddTranslation($lang, 'News.ArticleList.Description.Amount_{0}', '{0} article(s) written in this archive');
+$translator->AddTranslation($lang, 'News.ArticleList.New', 'Write new article');
+$translator->AddTranslation($lang, 'News.ArticleList.ArticleTitle', 'Title');
+$translator->AddTranslation($lang, 'News.ArticleList.Edit', 'Edit article');
+$translator->AddTranslation($lang, 'News.ArticleList.Delete', 'Delete article');
+
+/* Article form */
+$translator->AddTranslation($lang, 'News.ArticleForm.Title', 'Edit Article');
+$translator->AddTranslation($lang, 'News.ArticleForm.Description', 'Define Headline and content texts of your article, here.');
+$translator->AddTranslation($lang, 'News.ArticleForm.Legend', 'Article Settings');
+$translator->AddTranslation($lang, 'News.ArticleForm.Category', 'Category');
+$translator->AddTranslation($lang, 'News.ArticleForm.Author', 'Author');
+$translator->AddTranslation($lang, 'News.ArticleForm.Title', 'Title');
+$translator->AddTranslation($lang, 'News.ArticleForm.Teaser', 'Teaser Text');
+$translator->AddTranslation($lang, 'News.ArticleForm.Text', 'Main Text');
+$translator->AddTranslation($lang, 'News.ArticleForm.PublishLegend', 'Publishing');
+$translator->AddTranslation($lang, 'News.ArticleForm.Publish', 'Publish');
+$translator->AddTranslation($lang, 'News.ArticleForm.PublishFromDate', 'Visible from');
+$translator->AddTranslation($lang, 'News.ArticleForm.PublishFromHour', 'Hrs.');
+$translator->AddTranslation($lang, 'News.ArticleForm.PublishFromMinute', 'Min.');
+$translator->AddTranslation($lang, 'News.ArticleForm.PublishToDate', 'Visible to');
+$translator->AddTranslation($lang, 'News.ArticleForm.PublishToHour', 'Hrs.');
+$translator->AddTranslation($lang, 'News.ArticleForm.PublishToMinute', 'Min.');
+$translator->AddTranslation($lang, 'News.ArticleForm.Submit', 'Save');
+
 //News Article List Content
 $translator->AddTranslation($lang, 'News.ArticleList.BackendName', 'Article List');
 $translator->AddTranslation($lang, 'News.ArticleListForm.Title', 'Article List');
