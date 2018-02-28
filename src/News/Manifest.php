@@ -31,7 +31,7 @@ class Manifest extends BundleManifest
      */
     public function Version()
     {
-        return '1.0.1';
+        return '1.0.2';
     }
     
     /**

@@ -32,7 +32,7 @@ news/{article}.html
 === 1.0.0  ===
  - First working version
 
-=== 1.0.1 ===
+=== 1.0.1, 1.0.2 ===
   - Added "ReadMore" wording in article list
   - Added multiple missing translations
   - Replaced the wrapper tag for article teaser and texts from <p> to <div>
