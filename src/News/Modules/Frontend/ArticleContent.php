@@ -55,15 +55,15 @@ class ArticleContent extends FrontendModule
     private function InitMetaTitle() {
         switch ($this->archive->GetMetaTitlePlacement()) {
             case MetaPlacement::Append():
-                PageRenderer::AppendToTitle($this->archive->GetTitle());
+                PageRenderer::AppendToTitle($this->article->GetTitle());
                 break;
             
             case MetaPlacement::Prepend():
-                PageRenderer::PrependToTitle($this->archive->GetTitle());
+                PageRenderer::PrependToTitle($this->article->GetTitle());
                 break;
             
             case MetaPlacement::Replace():
-                PageRenderer::$Title = $this->archive->GetTitle();
+                PageRenderer::$Title = $this->article->GetTitle();
                 break;
         }
     }
