@@ -55,11 +55,11 @@ class ArticleContent extends FrontendModule
     private function InitMetaTitle() {
         switch ($this->archive->GetMetaTitlePlacement()) {
             case MetaPlacement::Append():
-                PageRenderer::AppendToTitle($this->article->GetTitle());
+                PageRenderer::AppendToTitle(' - ' . $this->article->GetTitle());
                 break;
             
             case MetaPlacement::Prepend():
-                PageRenderer::PrependToTitle($this->article->GetTitle());
+                PageRenderer::PrependToTitle($this->article->GetTitle() . ' - ');
                 break;
             
             case MetaPlacement::Replace():
@@ -75,11 +75,11 @@ class ArticleContent extends FrontendModule
         }
         switch ($this->archive->GetMetaDescriptionPlacement()) {
             case MetaPlacement::Append():
-                PageRenderer::AppendToDescriptoin($teaser);
+                PageRenderer::AppendToDescriptoin(' - ' . $teaser);
                 break;
             
             case MetaPlacement::Prepend():
-                PageRenderer::PrependToDescription($teaser);
+                PageRenderer::PrependToDescription($teaser . ' - ');
                 break;
             
             case MetaPlacement::Replace():
