@@ -38,3 +38,6 @@ news/{article}.html
   - Replaced the wrapper tag for article teaser and texts from <p> to <div>
     in default frontend templates to avoid invalid HTML caused by surrounding <p> from backend rich text editor
   - Added already planned meta title adjustment by article title and teaser
+
+=== 1.0.6. ==
+  - Using new, spelling-corrected PageRenderer::AppendToDescription and updated reference in Manifest

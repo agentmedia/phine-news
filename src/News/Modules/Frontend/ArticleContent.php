@@ -75,7 +75,7 @@ class ArticleContent extends FrontendModule
         }
         switch ($this->archive->GetMetaDescriptionPlacement()) {
             case MetaPlacement::Append():
-                PageRenderer::AppendToDescriptoin(' - ' . $teaser);
+                PageRenderer::AppendToDescription(' - ' . $teaser);
                 break;
             
             case MetaPlacement::Prepend():
